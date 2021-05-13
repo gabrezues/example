@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picturegram</title>
+
+	<style type="text/css">
+		h1 {
+			text-align: center;
+			font-family: courier;
+			color: white
+		}
+
+		#main {
+			width: calc(100% - 10px);
+			height: auto;
+			margin: 5px;
+			border: 1px solid darkred;
+		}
+
+		.other {
+			width: calc(33.3333333% - 13px);
+			height: auto;
+			margin: 4px;
+			border: 1px solid rgb(10,243,142)
+		}
+
+		#content {
+			width: 550px;
+			margin: auto;
+		}
+
+		body {
+			background: url("jlwp.jpg");
+			background-size: 100% auto;
+		}
+		
+	</style>
+</head>
+<body>
+
+	<div id="content">
+		<h1 style="color: #3F22FF;">Picturegram</h1>
+
+		<!--How the grid starts off-->
+
+			<img src="darkseid.jpg" id="main">
+			<img src="superman.jpg" class="other">
+			<img src="batman.jpeg" class="other">
+			<img src="wonderwoman.jpg" class="other">
+			<img src="hawkgirl.jpg" class="other">
+			<img src="martian.jpg" class="other">
+			<img src="greenlantern.jpg" class="other">
+			<img src="cyborg.jpg" class="other">
+			<img src="flash.png" class="other">
+			<img src="zatanna.jpg" class="other">
+	</div>
+
+	<p style="text-align:center;"><i>Made by a <q>nerd!</q></i></p>
+	<a href="https://www.dccomics.com/">The Creators</a>
+
+	<table>
+		<tr>
+			<th>Superhero</th>
+			<th>Alter Ego</th>
+			<th>Personal Rank</th>
+		</tr>
+		<tr>
+			<td>Superman</td>
+			<td>Clark Kent</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>Batman</td>
+			<td>Bruce Wayne</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Flash</td>
+			<td>Wally West</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>Wonder Woman</td>
+			<td>Diana Prince</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>Hawkgirl</td>
+			<td>Shayera Hol</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td>Green Lantern</td>
+			<td>John Stuart</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>Cyborg</td>
+			<td>Victor Stone</td>
+			<td>6</td>
+		</tr>
+		<tr>
+			<td>Zatanna</td>
+			<td>Zatanna Zatara</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Martian Manhunter</td>
+			<td>J'onn J'onzz</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Darkseid</td>
+			<td>Uxas</td>
+			<td>5</td>
+		</tr>
+	</table>
+
+	<ul>
+		<li>DC is the better universe of superheroes</li>
+		<li>Although Marvel has better live action films, DC's animated movies take any and every prize.</li>
+	</ul>
+
+</body>
+
+	<script type="text/javascript">
+		const bigImage = document.querySelector("#main");
+		const images = document.querySelectorAll(".other");
+
+		images.forEach(image => image.addEventListener("click", 
+			function(e) {
+				let clickedImage = e.target.src;
+				let swapImage = bigImage.src;
+				bigImage.src = clickedImage;
+				e.target.src = swapImage;
+			}
+			));
+	</script>
+</html>
